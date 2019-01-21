@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+ <title>Форма реєстрації</title>
+  <meta charset="utf-8">
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<style>
+body{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f9f8+0,8989ba+100 */
+background: #f4f9f8; /* Old browsers */
+background: -moz-linear-gradient(top,  #f4f9f8 0%, #8989ba 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f4f9f8 0%,#8989ba 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f4f9f8 0%,#8989ba 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f9f8', endColorstr='#8989ba',GradientType=0 ); /* IE6-9 */}
+
+#app{margin:0 auto;
+width:600px;
+height:600px;
+}
+
+form{width:500px;
+height:500px;
+border:2px solid grey;
+box-shadow:10px 10px 10px darkblue;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,c1bfea+100 */
+background: #ebe9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebe9f9 0%, #d8d0ef 50%, #c1bfea 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ebe9f9 0%,#d8d0ef 50%,#c1bfea 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ebe9f9 0%,#d8d0ef 50%,#c1bfea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea',GradientType=0 ); /* IE6-9 */
+
+}
+
+input, label,p,h3{margin-left:10px;}
+.knopka{margin-left:10px;
+background-color:darkblue;
+color:white;
+font-size:16px;}
+</style>
+<body>
+<div id="app">
+<form>
+<h3>Form of registration</h3>
+<label>Login:</label>
+<br>
+<input type="text" v-model="login" placeholder="Введіть логін" class="form-control">
+<br>
+<label>Password:</label>
+<br>
+<input type="password" v-model="password" placeholder="Введіть пароль" class="form-control">
+<br>
+<label>Age:</label>
+<br>
+<input type="number" v-model="age" min="18" placeholder="Вкажіть свій вік" class="form-control">
+<br>
+<label>Date of registration:</label>
+<br>
+<input type="date" v-model="date"  placeholder="Виберіть дату реєстрації" class="form-control">
+<br>
+<br>
+<button class="knopka">Submit</button>
+<div>
+<h3>Information about new user:</h3>
+<p>Login:{{login}}</p>
+<p>Password:{{password}}</p>
+<p>Age:{{age}}</p>
+<p>Date of registration{{date}}</p>
+</div>
+</form>
+</div>
+
+<script>
+var app =new Vue({
+el:'#app',
+data:{
+login:'',
+password:'',
+age:'',
+date:''
+}
+});
+
+</script>
+
+</body>
+
+</html>
